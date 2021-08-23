@@ -54,6 +54,10 @@ enum planck_keycodes {
 #define NAV_BSP LT(_NAV, KC_BSPC)
 
 #define GUI_GRV LGUI(KC_GRV)
+// screen capture dialog
+#define GUI_CAP LSFT(LGUI(KC_5))
+// put screens to sleep
+#define GUI_SLP LSFT(LCTL(KC_POWER))
 
 // Window manager (magnet) keys
 #define WM_FULL LCTL(LALT(KC_ENT))
@@ -189,7 +193,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┐
    *                 │     │Ms B2│Ms Up│Ms B1│Ms WD│     │     │Prev │ NW  │  N  │ NE  │     │
    *                 ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
-   *                 │     │Ms L │Ms Dn│Ms R │Ms WU│     │     │Full │  W  │Centr│  E  │     │
+   *                 │     │Ms L │Ms Dn│Ms R │Ms WU│ScSht│ScSlp│Full │  W  │Centr│  E  │     │
    *                 ├─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┤
    *                 │     │Undo │ Cut │Copy │Paste│     │     │Next │ SW  │  S  │ SE  │     │
    *                 ┢━━━━━╅─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────╆━━━━━┪
@@ -199,7 +203,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_GUI] = LAYOUT_planck_grid(
     _______, KC_BTN2, KC_MS_U, KC_BTN1, KC_WH_D, XXXXXXX, XXXXXXX, WM_PREV,   WM_NW,   WM_N,    WM_NE, _______,
-    _______, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U, XXXXXXX, XXXXXXX, WM_FULL,    WM_W,   WM_CNTR,  WM_E, _______,
+    _______, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U, GUI_CAP, GUI_SLP, WM_FULL,    WM_W,   WM_CNTR,  WM_E, _______,
     _______, LGUI(KC_Z), LGUI(KC_X),  LGUI(KC_C), LGUI(KC_V), XXXXXXX, XXXXXXX, WM_NEXT,   WM_SW,   WM_S,    WM_SE, _______,
     _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_BRMD, KC_SLEP, KC_WAKE, KC_BRMU, KC_MUTE, KC_VOLD, KC_VOLU, _______
   ),
