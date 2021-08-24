@@ -59,10 +59,10 @@ enum planck_keycodes {
 // put screens to sleep
 #define GUI_SLP LSFT(LCTL(KC_POWER))
 
-// Window manager (magnet) keys
-#define WM_FULL LCTL(LALT(KC_ENT))
-#define WM_NEXT LCTL(LALT(LGUI(KC_RGHT)))
-#define WM_PREV LCTL(LALT(LGUI(KC_LEFT)))
+// Window manager keys
+#define WM_FULL LCTL(LGUI(KC_F))
+#define WM_NEXT LCTL(KC_RGHT)
+#define WM_PREV LCTL(KC_LEFT)
 #define WM_NW   LCTL(LALT(KC_U))
 #define WM_N    LCTL(LALT(KC_UP))
 #define WM_NE   LCTL(LALT(KC_I))
