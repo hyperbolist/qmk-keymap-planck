@@ -1,4 +1,9 @@
-BOOTMAGIC_ENABLE     = no   # Fixes the startup sound
-COMMAND_ENABLE       = no   # Disable shift combination, which conflicts with shift-parens
-RGBLIGHT_ENABLE      = no
-RGB_MATRIX_ENABLE    = yes
+BOOTMAGIC_ENABLE     = no   # obsolete feature, disabling fixes the startup sound
+COMMAND_ENABLE       = no   # obsolete feature
+CONSOLE_ENABLE       = no   # never going to read these messages
+EXTRAKEY_ENABLE      = yes  # volume and power, etc
+MIDI_ENABLE          = no   # nope
+MOUSEKEY_ENABLE      = no   # fiddly and unpleasant
+RGBLIGHT_ENABLE      = no   # either rgblight or rgb_matrix
+RGB_MATRIX_ENABLE    = yes  # my rev6 came with a 9-segment "matrix"
+UNICODE_ENABLE       = no   # nope
